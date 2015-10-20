@@ -77,3 +77,22 @@ var pieData = [
 
 var myPie = new Chart(document.getElementById("chart2").getContext("2d")).Pie(pieData);
 
+function year1P(){
+	console.log("HAHA")
+	myPie.segments[0].value=20;
+	myPie.segments[1].value=30;
+	myPie.segments[2].value=40;
+	myPie.segments[3].value=50;
+	myPie.segments[4].value=60;
+	myPie.update();
+};
+
+function year2P(){
+	console.log("HAHA")
+	myPie.segments[0].value=60;
+	myPie.segments[1].value=120;
+	myPie.segments[2].value=210;
+	myPie.segments[3].value=224;
+	myPie.segments[4].value=123;
+	myPie.update();
+};
