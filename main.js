@@ -96,3 +96,43 @@ function year2P(){
 	myPie.segments[4].value=123;
 	myPie.update();
 };
+
+// Line
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+var lineChartData = {
+	labels : ["2011","2012","2013","2014","2015"],
+	datasets : [
+		{
+			label: "My First dataset",
+			fillColor : "rgba(220,220,220,0.2)",
+			strokeColor : "rgba(220,220,220,1)",
+			pointColor : "rgba(220,220,220,1)",
+			pointStrokeColor : "#fff",
+			pointHighlightFill : "#fff",
+			pointHighlightStroke : "rgba(220,220,220,1)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		}
+	]
+};
+
+myLine = new Chart(document.getElementById("chart3").getContext("2d")).Line(lineChartData);
+
+function canonL(){
+	console.log("HAHA")
+	myLine.datasets[0].points[0].value = 65;
+	myLine.datasets[0].points[1].value = 59;
+	myLine.datasets[0].points[2].value = 90;
+	myLine.datasets[0].points[3].value = 81;
+	myLine.datasets[0].points[4].value = 56;
+	myLine.update();
+};
+
+function nikonL(){
+	console.log("HAHA")
+	myLine.datasets[0].points[0].value = randomScalingFactor();
+	myLine.datasets[0].points[1].value = randomScalingFactor();
+	myLine.datasets[0].points[2].value = randomScalingFactor();
+	myLine.datasets[0].points[3].value = randomScalingFactor();
+	myLine.datasets[0].points[4].value = randomScalingFactor();
+	myLine.update();
+};
