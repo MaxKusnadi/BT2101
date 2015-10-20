@@ -41,4 +41,39 @@ function canonR(){
 };
 
 // PIE
+var pieData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Nikon"
+				},
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Canon"
+				},
+				{
+					value: 100,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Sony"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Theodore"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Chan Khan"
+				}
+
+			];
+
+var myPie = new Chart(document.getElementById("chart2").getContext("2d")).Pie(pieData);
 
