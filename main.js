@@ -165,6 +165,7 @@ function pentaxR(){
 	myRadar.update();
 	myRadarPos.update();
 };
+
 // PIE
 var pieData = [
 				{

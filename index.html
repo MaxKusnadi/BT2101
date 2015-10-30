@@ -7,11 +7,19 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen"> -->
 
     <script src='Chart.js/Chart.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src='moreCharts.js'></script>
 
     <title>BT2101 Project 2015</title>
   </head>
 
   <body>
+    <div id="container" style="width:100%; height:400px;">
+      <script>
+        Stacked();      
+      </script>
+    </div>
     <div>
       <h3> % of reviews on a particular aspect</h3>
       <canvas id='chart1' width='400' height='400'></canvas>
