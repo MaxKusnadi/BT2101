@@ -1,4 +1,4 @@
-// RADAR
+// RADAR NEW
 var radarData = {
 	"canon":{
 		data:[16.15	,25.89,		39.82	,		17.68,	45.59,		44.64,		33.04,		31.65]
