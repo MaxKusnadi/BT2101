@@ -165,18 +165,6 @@ function pentaxR(){
 	myRadar.update();
 	myRadarPos.update();
 };
-
-function othersR(){
-	for (var i = 0; i < 8;i++){ 
-		myRadar.datasets[0].points[i].value = radarData["others"].data[i];
-		if(i<7){
-			myRadarPos.datasets[0].points[i].value = radarDataPos["others"].data[i]
-		}
-	}
-	myRadar.update();
-	myRadarPos.update();
-};
-
 // PIE
 var pieData = [
 				{
