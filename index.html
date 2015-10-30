@@ -12,21 +12,29 @@
   </head>
 
   <body>
+    <div>
+      <canvas id='chart1' width='600' height='600'></canvas>
 
-    <canvas id='chart1' width='400' height='400'></canvas>
+      <button id='canonRadar' onclick='canonR()'>Canon</button>
+      <button id='nikonRadar' onclick='nikonR()'>Nikon</button>
+      <button id='canonRadar' onclick='sonyR()'>Sony</button>
+      <button id='nikonRadar' onclick='fujiR()'>Fuji</button>
+      <button id='canonRadar' onclick='olympusR()'>Olympus</button>
+      <button id='canonRadar' onclick='panasonicR()'>Panasonic</button>
+      <button id='nikonRadar' onclick='pentaxR()'>Pentax</button>
+    </div>
+    <div>
+      <canvas id='chart2' width='600' height='600'></canvas>
 
-    <button id='canonRadar' onclick='canonR()'>Canon</button>
-    <button id='nikonRadar' onclick='nikonR()'>Nikon</button>
+      <button id='2011Pie' onclick='year1P()'>2011</button>
+      <button id='2012Pie' onclick='year2P()'>2012</button>
+    </div>
+    <div>
+      <canvas id='chart3' width='600' height='600'></canvas>
 
-    <canvas id='chart2' width='400' height='400'></canvas>
-
-    <button id='2011Pie' onclick='year1P()'>2011</button>
-    <button id='2012Pie' onclick='year2P()'>2012</button>
-
-    <canvas id='chart3' width='400' height='400'></canvas>
-
-    <button id='2011Line' onclick='nikonL()'>Nikon</button>
-    <button id='2012Line' onclick='canonL()'>Canon</button>
+      <button id='2011Line' onclick='nikonL()'>Nikon</button>
+      <button id='2012Line' onclick='canonL()'>Canon</button>
+    </div>
     <!-- <header>
       <div class="container">
         <h1>Bt2101</h1>
