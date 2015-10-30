@@ -1,28 +1,55 @@
 // RADAR
 var radarData = {
 	"canon":{
-		data:[0,	0.3988288874,	0.2279549719,	0,	0.3919413919,	0,	0,	0.3540296053]
+		data:[16.15	,25.89,		39.82	,		17.68,	45.59,		44.64,		33.04,		31.65]
 	},
 	"nikon":{
-		data:[0.1951807229,	0.4580351334,	0.4287054409,	0.03778096604,	0.601953602,	0.1019371229,	0.1484145145,	0.421875]
+		data:[18.58,	27.71,		44.1,		18.47,		49.03,			47.85,		37.58,		33.3]
 	},
 	"sony":{
-		data:[0.1413654618,	0.5123617437,	0.1519699812,	0.3883309421,	0.2490842491,	0.01905366783,	0.1274926447,	0.1986019737]
+		data:[17.91,	29.38,		38.2,		25.8,		43.25,			45.24,		36.94,		27.87]
 	},
 	"fuji":{
-		data:[0.4530120482,	0.6525699414,	0.2063789869,	0.4232424677,	0.21001221	,0.1559225151,	0.2098725074,	0]
+		data:[21.79,	33.69,		39.36,		26.53,		42.61,			49.55,		39.46,		23.04]
 	},
 	"olympus":{
-		data:[0.983935743,	1,	1,	1,	1,	0.525563671,	0.6194834913,	0.8355263158]
+		data:[28.4,	44.37,		56.28,		38.59,		55.55,			61.19,		51.99,		43.36]
 	},
 	"panasonic":{
-		data:[0.1445783133,	0.500325309,	0,	0.4457197513,	0,	0.02635757383,	0.1520104609,	0.09457236842]
+		data:[17.95,	29.01,		34.96,		27,		39.17,			45.47,		37.69,		25.34]
 	},
 	"pentax":{
-		data:[1,	0.5113858165,	0.8306754221,	0.2840746055,	0.8864468864	,0.3655128612,	0.3906505394,	1]
+		data:[28.6,	29.35,		52.67,		23.62,		53.69,			56.15,		44.99	,	47.36]
 	},
 	"others":{
-		data:[0.6192771084,	0,	0.3320825516,	0.02391200383,	0.7301587302,	1,	1,	0.5008223684]
+		data:[23.86	,13.63,		42.04,		18.18,		51.13,			76.13	,	63.63,		35.22]
+	}
+}
+
+var radarDataPos = {
+	"canon":{
+		data:[0.08086633346,	0.1898886548,	0.3933970997,	0.4858858859,		1,	0.9488247545,	0.3536243492]
+	},
+	"nikon":{
+		data:[0.003203895937,	0.08516400843,	0.3835236038,	0.4618618619,		0.9412288513,	0.8774174353,	0.1149379255]
+	},
+	"sony":{
+		data:[0.08778674869,	0.3114655432,	0.1761801913,	0.1447447447	,	0.5227070347,	0.5739363285,	0.1982378855]
+	},
+	"fuji":{
+		data:[0.3930539536,	0.01655130906,	0.1379203949,	0.01501501502,		0.4016028495,	0.7566200536,	0.01001201442]
+	},
+	"olympus":{
+		data:[0.1605792644,	0.139331929,	0.007713668621,	0.06666666667,		0.02226179875,	0.4745611425,	0.133360032]
+	},
+	"panasonic":{
+		data:[0.2279892349,	0.3644297322,	0.1397716754,	0.1987987988,		0.624220837,	0.7221065159,	0.2390869043]
+	},
+	"pentax":{
+		data:[0.28078944,	0.007523322299,	0.3619253317,	0.2612612613,		0.7951914515,	1,	0.498598318]
+	},
+	"others":{
+		data:[1,	1,	1,	1,		0.06322350846,	0.007438262422,	1]
 	}
 }
 
@@ -42,64 +69,112 @@ var radar = {
 		]
 	};
 
+var radarPos = {
+		labels: ["Build Quality", "Weight", "Auto-Focus", "Battery Life", "Handling Ergonomics",  "User-Friendliness", "Price"  ],
+		datasets: [
+			{
+				label: "Canon Dataset",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: radarDataPos["canon"].data
+			}
+		]
+	};
+
 var myRadar = new Chart(document.getElementById("chart1").getContext("2d")).Radar(radar);
 
-var nikonBut = document.getElementById('nikonRadar');
+var myRadarPos = new Chart(document.getElementById("chart1pos").getContext("2d")).Radar(radarPos);
 
 function nikonR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["nikon"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["nikon"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function canonR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["canon"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["canon"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function fujiR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["fuji"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["fuji"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function sonyR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["sony"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["sony"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function olympusR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["olympus"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["olympus"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function panasonicR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["panasonic"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["panasonic"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function pentaxR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["pentax"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["pentax"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 function othersR(){
 	for (var i = 0; i < 8;i++){ 
 		myRadar.datasets[0].points[i].value = radarData["others"].data[i];
+		if(i<7){
+			myRadarPos.datasets[0].points[i].value = radarDataPos["others"].data[i]
+		}
 	}
 	myRadar.update();
+	myRadarPos.update();
 };
 
 // PIE
