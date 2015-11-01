@@ -79,7 +79,7 @@
 			scaleStartValue: null,
 
 			// String - Colour of the scale line
-			scaleLineColor: "rgba(0,0,0,.1)",
+			scaleLineColor: "rgba(0,0,0, 0.1)",
 
 			// Number - Pixel width of the scale line
 			scaleLineWidth: 1,
@@ -3157,7 +3157,7 @@
 			scaleBeginAtZero : true,
 
 			//String - Colour of the angle line
-			angleLineColor : "rgba(0,0,0,.1)",
+			angleLineColor : "rgba(0,0,0,0.5)",
 
 			//Number - Pixel width of the angle line
 			angleLineWidth : 1,
@@ -3169,7 +3169,7 @@
 			pointLabelFontStyle : "normal",
 
 			//Number - Point label font size in pixels
-			pointLabelFontSize : 10,
+			pointLabelFontSize : 13,
 
 			//String - Point label font colour
 			pointLabelFontColor : "#666",
@@ -3178,7 +3178,7 @@
 			pointDot : true,
 
 			//Number - Radius of each point dot in pixels
-			pointDotRadius : 3,
+			pointDotRadius : 4,
 
 			//Number - Pixel width of point dot stroke
 			pointDotStrokeWidth : 1,
