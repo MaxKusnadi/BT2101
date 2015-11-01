@@ -5,6 +5,7 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen"> -->
+    <link rel="stylesheet" type="text/css" href="css.css" media="screen">
 
     <script src='Chart.js/Chart.js'></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -15,17 +16,18 @@
   </head>
 
   <body>
-    <div id="container" style="width:100%; height:400px;">
-      <script>
-        Stacked();      
-      </script>
-    </div>
-    <div>
-      <h3> % of reviews on a particular aspect</h3>
+    <h1 align="center">Canon Customer Insights Report</h1>
+    <h2>Our Findings</h2>
+    <h3> 1. Frequency Analysis by Features and Sentiments</h3>
+    <div class="diagram1">
+      <h4 align="center"> % of reviews on a particular aspect</h3>
       <canvas id='chart1' width='400' height='400'></canvas>
-      <h3> Normalize values of positive reviews</h3>
+    </div>
+    <div class="diagram1">
+      <h4 align="center"> Normalize values of positive reviews</h3>
       <canvas id='chart1pos' width='400' height='400'></canvas>
-
+    </div>
+    <div align = "center" style="padding-bottom:50px">
       <button id='canonRadar' onclick='canonR()'>Canon</button>
       <button id='nikonRadar' onclick='nikonR()'>Nikon</button>
       <button id='canonRadar' onclick='sonyR()'>Sony</button>
@@ -34,12 +36,25 @@
       <button id='canonRadar' onclick='panasonicR()'>Panasonic</button>
       <button id='nikonRadar' onclick='pentaxR()'>Pentax</button>
     </div>
+
+    <h3>2. Review Volume Against Time (All)</h3>
+    <div id="container" style="width:100%; height:400px; padding-bottom:50px">
+      <script>
+        Stacked();      
+      </script>
+    </div>
+
+    <h3>3. Percentage of Positive Rating Trend Overtime</h3>
+    <h3>4. Volume of Reviews Trend over Time </h3>
+
     <div>
       <canvas id='chart2' width='600' height='600'></canvas>
 
       <button id='2011Pie' onclick='year1P()'>2011</button>
       <button id='2012Pie' onclick='year2P()'>2012</button>
     </div>
+    
+    
     <div>
       <canvas id='chart3' width='600' height='600'></canvas>
 

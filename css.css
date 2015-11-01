@@ -1,0 +1,11 @@
+.diagram1{
+    width:50%;
+    display:block;
+    float:left;
+}
+
+button{
+	height: 50px;
+	width: 80px;
+	-webkit-border-radius: 15px;
+}

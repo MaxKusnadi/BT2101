@@ -58,12 +58,12 @@ var radar = {
 		datasets: [
 			{
 				label: "Canon Dataset",
-				fillColor: "rgba(220,220,220,0.2)",
-				strokeColor: "rgba(220,220,220,1)",
-				pointColor: "rgba(220,220,220,1)",
-				pointStrokeColor: "#fff",
-				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(220,220,220,1)",
+				fillColor: "rgba(242,29,54,0.4)",
+				strokeColor: "rgba(95,29,29,1)",
+				pointColor: "rgba(76,56,84,1)",
+				pointStrokeColor: "#eee",
+				pointHighlightFill: "#eee",
+				pointHighlightStroke: "rgba(242,29,54,1)",
 				data: radarData["canon"].data
 			}
 		]
@@ -74,12 +74,12 @@ var radarPos = {
 		datasets: [
 			{
 				label: "Canon Dataset",
-				fillColor: "rgba(220,220,220,0.2)",
-				strokeColor: "rgba(220,220,220,1)",
-				pointColor: "rgba(220,220,220,1)",
-				pointStrokeColor: "#fff",
-				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(220,220,220,1)",
+				fillColor: "rgba(242,29,54,0.4)",
+				strokeColor: "rgba(95,29,29,1)",
+				pointColor: "rgba(76,56,84,1)",
+				pointStrokeColor: "#eee",
+				pointHighlightFill: "#eee",
+				pointHighlightStroke: "rgba(242,29,54,1)",
 				data: radarDataPos["canon"].data
 			}
 		]
