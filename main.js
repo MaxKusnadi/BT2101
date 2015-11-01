@@ -213,7 +213,7 @@ var pieData = [
 
 			];
 
-var myPie = new Chart(document.getElementById("chart2").getContext("2d")).Pie(pieData);
+//var myPie = new Chart(document.getElementById("chart2").getContext("2d")).Pie(pieData);
 
 function year1P(){
 	console.log("HAHA")
@@ -253,7 +253,7 @@ var lineChartData = {
 	]
 };
 
-myLine = new Chart(document.getElementById("chart3").getContext("2d")).Line(lineChartData);
+//myLine = new Chart(document.getElementById("chart3").getContext("2d")).Line(lineChartData);
 
 function canonL(){
 	console.log("HAHA")
